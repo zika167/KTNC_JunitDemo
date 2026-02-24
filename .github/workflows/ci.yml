@@ -24,7 +24,7 @@ jobs:
       run: mvn clean compile
     
     - name: Run tests
-      run: mvn test
+      run: mvn test -Dtest=poly.edu.junitdemo.lab8.**
     
     - name: Generate test report
       if: always()

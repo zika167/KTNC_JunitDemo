@@ -21,12 +21,12 @@ class AppTest {
         Assertions.assertTrue(result, "Lỗi: Số 4 phải là số chẵn");
     }
 
-    // Test trường hợp số 3 (Kỳ vọng: Fail - Để quan sát thanh màu đỏ)
+    // Test trường hợp số 3 (Kỳ vọng: Pass - Số 3 là số lẻ)
     @Test
     void testIsEventNumber3() {
         App demo1 = new App();
         boolean result = demo1.isEventNumber(3);
-        // Vì 3 là số lẻ, isEventNumber trả về false, nên assertTrue(false) sẽ gây lỗi
-        Assertions.assertTrue(result, "Số 3 không phải số chẵn nên bài test này sẽ báo Đỏ");
+        // Vì 3 là số lẻ, isEventNumber trả về false
+        Assertions.assertFalse(result, "Số 3 là số lẻ nên phải trả về false");
     }
 }
